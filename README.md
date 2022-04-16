@@ -119,7 +119,7 @@ std::istream& operator>>(std::istream& in, Contact& rhs) {
 
 ### Driver
 
-To put it all together, I needed a way to put it all together(in other words, I needed a driver), I could have made another class that would specifically be resposible to drive all of the component of this contact manager, but I decided to just use the main method and implement my functions there.
+I needed a way to put it all together(in other words, I needed a driver), I could have made another class that would specifically be resposible to drive all of the component of this contact manager, but I decided to just use the main method and implement my functions there.
 (Side note: I did not do it because my proffessor said it was not required, but I made sure to keep my main method clean)
 
 Based the objective, which was mentioned at the beginning, I made 4 functions that provide the user ability to:
@@ -305,5 +305,7 @@ Here are some screenshots on functionality of this application:
 
 <img width="295" alt="Screen Shot 2022-04-15 at 8 18 58 PM" src="https://user-images.githubusercontent.com/59861277/163659503-d65fb3ec-91cc-4cc5-9553-b04501213622.png">
 
+## What I Learned
 
+I learned a lot about operator overloading and how to implement this concept into a real solution, and I find operator overloading very useful and necessary.
 
