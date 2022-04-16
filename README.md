@@ -74,3 +74,45 @@ std::ostream& operator<<(std::ostream& o, const Name& rhs) {
 }
 ```
 
+After that I overloaded the input(istream) and output(ostream) operators in the Address class,
+```c++
+// istream "in" operator modifier
+// provides ability to read the contact street, state and zip
+// from the file
+std::istream& operator>>(std::istream& in, Address& a) {
+    getline(in, a.street);
+    getline(in, a.state);
+    getline(in, a.zip);
+    return in;
+}
+
+// istream out operator modifier
+// provide the ability to output the street, state and zip in certain format
+std::ostream& operator<<(std::ostream& o, const Address& rhs) {
+    o << rhs.street << "\n" << rhs.state << "\n" << rhs.zip;
+    return o;
+}
+```
+
+And finally, I had to put it all together in the Contact class,
+```c++
+// modifies ostream "out" operator using a friend function
+// modifies the output to have ability
+// to print all the info about the contact on each new line and format it
+std::ostream& operator<<(std::ostream& out, const Contact& rhs) {
+    out << rhs.id << "\n" << rhs.name.getFName() << "\n" << rhs.name.getLName() << "\n" <<
+        rhs.address.getStreet() << "\n" << rhs.address.getState() << "\n" <<
+        rhs.address.getZip() << "\n" << rhs.phone;
+    return out;
+}
+
+// modifies the "in" operator of the istream
+// to have the ability to read the contacts from the file
+std::istream& operator>>(std::istream& in, Contact& rhs) {
+    in >> rhs.name;
+    in >> rhs.address;
+    getline(in, rhs.phone);
+    rhs.setID();
+    return in;
+}
+```
