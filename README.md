@@ -116,3 +116,125 @@ std::istream& operator>>(std::istream& in, Contact& rhs) {
     return in;
 }
 ```
+
+### Driver
+
+To put it all together, I needed a way to put it all together, I could have made another class that would specifically be resposible
+to drive all of the component of this contact manager, but I decided to just use the main method and implement my function there.
+
+Based the objective, which was mentioned at the beginning, I made 4 functions that provide the user ability to:
+
+* Load Contacts
+```c++
+// function to read in contacts from the input file and add them to the vector of contacts
+// so that we can test the contact search and potentially load contacts user might have prior to creating new ones
+void loadContacts(std::istream& in, std::vector<Contact>& list) {
+    // check if the file is open/found
+    if(!in) {
+        std::cout << "File not found" << std::endl;
+    }
+    // initialize contact
+    Contact c;
+
+    // add contacts to the vector from the file until there are no more contacts in the file
+    // using modified istream
+    while(in >> c) {
+        list.push_back(c);
+    }
+}
+```
+* Save Contacts
+```c++
+// function to write all the contacts in the vector to the output file
+// essentially transfer all the contacts into the output.txt file
+void saveContacts(std::ostream& out, const std::vector<Contact>& list) {
+    // write all the contacts to the file output
+    for(const auto & i : list) {
+        out << i << std::endl;
+    }
+}
+```
+* Add Contact
+```c++
+// function to add individual contact (prompts the user to enter information) and adds the contact to vector
+void addContact(std::vector<Contact>& list) {
+    // initialize variables to take in the information about a contact
+    std::string first, last, street, state, zip, phone;
+
+    // get contact information from the user
+    std::cout << "-------------------------------------------------------------------------" << std::endl;
+    std::cout << "   --- Enter the following information for your contact ---\n";
+    std::cout << "   --- Enter first name: ";
+    std::getline(std::cin, first); // read in first name and store it as "first"
+    std::cout << "   --- Enter last name: ";
+    std::getline(std::cin, last); // read in last name and store it as "last"
+    std::cout << "   --- Enter street address: ";
+    std::getline(std::cin, street); // read in street address and store it as "street"
+    std::cout << "   --- Enter state: ";
+    std::getline(std::cin, state); // read in state and store it as "state"
+    std::cout << "   --- Enter zip: ";
+    std::getline(std::cin, zip); // read in zip code and store it as "zip"
+    std::cout << "   --- Enter phone: ";
+    std::getline(std::cin, phone); // read in phone number and store it as "phone"
+
+    // initialize contact with the information provided by the user
+    Contact c(first, last, street, state, zip, phone);
+
+    // add the contact to the vector of contacts
+    list.push_back(c);
+
+    // notify the user that the contact has been successfully added
+    // specify what contact was added and provide the id
+    // format (Contact:|first_name, last_name| ID:|id of that contact|)
+    std::cout << "-------------------------------------------------------------------------" << std::endl;
+    std::cout << "   --- Contact:|" << first << ", " << last << "| " <<
+        "ID:|" << c.getID() << "| has been successfully added ---" << std::endl;
+    std::cout << "-------------------------------------------------------------------------" << std::endl;
+```
+* Search Contact
+```c++
+// search for certain contact (based off user input) in the vector of contacts
+// and print it to the console
+void searchContact(std::vector<Contact>& list) {
+    // initialize ID variable to search for certain contact
+    int ID = 0;
+
+    // while loop that will break upon input of "-1"
+    while(ID != -1) {
+        // tell the user how to stop searching if they would like to
+        std::cout << "-------------------------------------------------------------------------" << std::endl;
+        std::cout << "   --- Enter -1 to STOP, number of available contacts:|" << list.size() <<"|" << std::endl;
+
+        // ask the user to input the contact number to search
+        std::cout << "   --- Enter number to search: ";
+
+        // store input as contactID
+        std::cin >> ID;
+
+        // line of dashed lines for better format of the app
+        std::cout << "-------------------------------------------------------------------------" << std::endl;
+
+        // only print contacts within the range of the vector
+        if(ID >= 1 && ID <= list.size()) {
+            // print out the contact that user is looking for
+            std::cout << "-------------------------------" << std::endl;
+            std::cout << list[ID - 1]; // subtract 1 to account for the way index works
+            std::cout << "\n-------------------------------" << std::endl;
+        }
+        // if user decides to stop, exit the program with exit code 0 (successful)
+        else if(ID == -1) {
+            // notify the user that program is terminating
+            std::cout << "   --- Exiting program... ";
+
+            // terminate the program
+            exit(0);
+        }
+        // if contact ID is out of range, tell the user that contact with that ID does not exist
+        // else statement will also cause the loop to iterate again, asking for new input
+        else {
+            std::cout << "   --- Contact number |" << ID << "| does not exist, try again.." << std::endl;
+        }
+    }
+}
+```
+
