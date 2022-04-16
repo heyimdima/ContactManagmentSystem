@@ -11,6 +11,6 @@ saved in a .txt file so they are available the next time the program is run.'''
 
 ## Purpose
 The purpose of this assignment is to assess your ability to:
-*Use multiple levels of abstraction in software design
-*123123123
-*123123  
+* Use multiple levels of abstraction in software design
+* 123123123
+* 123123  
