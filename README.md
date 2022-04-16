@@ -50,6 +50,8 @@ private:
 
 and that's how I broke down the Contact class, in order to overload the input and output operators in the future.
 
+***
+
 ### Operator Overloading
 
 In order to read/write contacts to a file, I had to overload the input and output operators
