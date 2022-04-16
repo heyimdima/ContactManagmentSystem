@@ -16,3 +16,17 @@ The purpose of this assignment is to assess the ability to:
 * Utilize file input/output in a C++ program.
 * Utilize operator overloading in a C++ program.
 
+## My approach
+### Object-Oriented Solution
+For this project I made the Contact Class which had following private properties: 
+```c++
+class Contact {
+private:
+    Name name;
+    Address address;
+    std::string phone;
+    int id;
+    // update identifier if object doesn't have one
+    void setID();
+```
+
