@@ -327,6 +327,6 @@ Here are some screenshots on functionality of this application:
 
 ## What I Learned
 
-I learned a lot about operator overloading and how to implement this concept into a real solution, and I find operator overloading very useful and necessary. Also, I have imporved my C++ skills throug this practice.
+I learned a lot about operator overloading and how to implement this concept into a real solution, and I find operator overloading very useful and necessary. Also, I have imporved my C++ skills through this practice.
 
 ***
