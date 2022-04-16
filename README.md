@@ -1,4 +1,4 @@
-# ContactManagmentSystem
+# Contact Managment System
 
 ## Overview
 This was the project I did for my CST-210 class, operator overloading was hard to figure out at first, but I was able to figure it out. I found this project to be fun and easy to implement.
