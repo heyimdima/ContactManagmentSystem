@@ -309,6 +309,8 @@ Here are some screenshots on functionality of this application:
 
 <img width="295" alt="Screen Shot 2022-04-15 at 8 18 58 PM" src="https://user-images.githubusercontent.com/59861277/163659503-d65fb3ec-91cc-4cc5-9553-b04501213622.png">
 
+***
+
 ## What I Learned
 
 I learned a lot about operator overloading and how to implement this concept into a real solution, and I find operator overloading very useful and necessary.
