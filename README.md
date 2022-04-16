@@ -42,6 +42,7 @@ private:
 
 and Contact has an address that is Address class which has the following properties:
 ```c++
+class Address {
 private:
     std::string street;
     std::string state;
