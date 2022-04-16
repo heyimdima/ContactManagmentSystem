@@ -21,6 +21,8 @@ The purpose of this assignment is to assess the ability to:
 ***
 ### Object-Oriented Solution
 
+***
+
 For this project I made the Contact Class which has the properties name, address, phone and id: 
 ```c++
 class Contact {
@@ -32,6 +34,7 @@ private:
     // update identifier if object doesn't have one
     void setID(); // sets the ID when the contact is created
 ```
+***
 
 So, the Contact has a name that is a Name class which has the followoing properties:
 ```c++
@@ -40,6 +43,8 @@ private:
     std::string first_name;
     std::string last_name;
 ```
+
+***
 
 and Contact has an address that is Address class which has the following properties:
 ```c++
@@ -50,10 +55,15 @@ private:
     std::string zip;
 ```
 
+***
+
 and that's how I broke down the Contact class, in order to overload the input and output operators in the future.
+
 ***
 
 ### Operator Overloading
+
+***
 
 In order to read/write contacts to a file, I had to overload the input and output operators
 
@@ -77,6 +87,8 @@ std::ostream& operator<<(std::ostream& o, const Name& rhs) {
 }
 ```
 
+***
+
 After that I overloaded the input(istream) and output(ostream) operators in the Address class,
 ```c++
 // istream "in" operator modifier
@@ -96,6 +108,8 @@ std::ostream& operator<<(std::ostream& o, const Address& rhs) {
     return o;
 }
 ```
+
+***
 
 And finally, I had to put it all together in the Contact class,
 ```c++
@@ -128,6 +142,8 @@ I needed a way to put it all together(in other words, I needed a driver), I coul
 
 Based on the objective, which was mentioned at the beginning, I made 4 functions that provide the user ability to:
 
+***
+
 * Load Contacts (see comments for explanation)
 ```c++
 // function to read in contacts from the input file and add them to the vector of contacts
@@ -147,6 +163,8 @@ void loadContacts(std::istream& in, std::vector<Contact>& list) {
     }
 }
 ```
+***
+
 * Save Contacts (see comments for explanation)
 ```c++
 // function to write all the contacts in the vector to the output file
@@ -158,6 +176,9 @@ void saveContacts(std::ostream& out, const std::vector<Contact>& list) {
     }
 }
 ```
+
+***
+
 * Add Contact (see comments for explanation)
 ```c++
 // function to add individual contact (prompts the user to enter information) and adds the contact to vector
@@ -195,6 +216,9 @@ void addContact(std::vector<Contact>& list) {
         "ID:|" << c.getID() << "| has been successfully added ---" << std::endl;
     std::cout << "-------------------------------------------------------------------------" << std::endl;
 ```
+
+***
+
 * Search Contact (see comments for explanation)
 ```c++
 // search for certain contact (based off user input) in the vector of contacts
@@ -241,6 +265,8 @@ void searchContact(std::vector<Contact>& list) {
     }
 }
 ```
+
+***
 
 Those 4 functions come together in my main method, 
 ```c++
