@@ -40,7 +40,7 @@ private:
     std::string last_name;
 ```
 
-Contact has an address that is Address class which has the following properties:
+and Contact has an address that is Address class which has the following properties:
 ```c++
 private:
     std::string street;
