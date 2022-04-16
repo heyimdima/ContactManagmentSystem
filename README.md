@@ -50,4 +50,27 @@ private:
 
 and that's how I broke down the Contact class, in order to overload the input and output operators in the future.
 
+### Operator Overloading
+
+In order to read/write contacts to a file, I had to overload the input and output operators
+
+I started by overloading the input(istream) and output(ostream) operators in the Name class,
+```c++
+...
+// istream "in" operator modifier
+// provides ability to read the contact first and last name
+// from the file
+std::istream& operator>>(std::istream& in, Name& rhs) {
+    getline(in, rhs.last_name);
+    getline(in, rhs.first_name);
+    return in;
+}
+
+// istream out operator modifier
+// provide the ability to output the first and last name in certain format
+std::ostream& operator<<(std::ostream& o, const Name& rhs) {
+    o << rhs.last_name << ", " << rhs.first_name;
+    return o;
+}
+```
 
