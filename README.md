@@ -119,6 +119,7 @@ std::istream& operator>>(std::istream& in, Contact& rhs) {
     return in;
 }
 ```
+***
 
 ### Driver
 
@@ -273,7 +274,7 @@ int main() {
     return 0;
 }
 ```
-
+***
 ### Screenshots / Project Functionality
 
 Here are some screenshots on functionality of this application:
