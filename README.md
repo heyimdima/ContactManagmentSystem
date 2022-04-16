@@ -119,7 +119,8 @@ std::istream& operator>>(std::istream& in, Contact& rhs) {
 
 ### Driver
 
-To put it all together, I needed a way to put it all together(in other words, I needed a driver), I could have made another class that would specifically be resposible to drive all of the component of this contact manager, but I decided to just use the main method and implement my function there.
+To put it all together, I needed a way to put it all together(in other words, I needed a driver), I could have made another class that would specifically be resposible to drive all of the component of this contact manager, but I decided to just use the main method and implement my functions there.
+(Side note: I did not do it because my proffessor said it was not required, but I made sure to keep my main method clean)
 
 Based the objective, which was mentioned at the beginning, I made 4 functions that provide the user ability to:
 
@@ -236,4 +237,58 @@ void searchContact(std::vector<Contact>& list) {
     }
 }
 ```
+
+Those 4 functions come together in my main method, 
+```c++
+int main() {
+    // initialize the files for input and output
+    std::ifstream input("/Users/dimabondar/Desktop/School/Year1S2/CST-210/CST-210_WorkSpace/ContactManagmentSystem/input.txt");
+    std::ofstream output("/Users/dimabondar/Desktop/School/Year1S2/CST-210/CST-210_WorkSpace/ContactManagmentSystem/output.txt");
+
+    // initialize the vector of the class Contact to store the contacts
+    std::vector<Contact> myContacts;
+
+    // initialize a variable to hold user input so the loop can break upon certain input
+    std::string userInput;
+
+    // while loop to enter contacts until user types in "-1" to end the loop
+    while(userInput != "-1") {
+        addContact(myContacts); // create contact
+        std::cout << "   ---Enter -1 to search contacts, enter 1 to add another contact: ";
+        std::getline(std::cin, userInput); // read in input and store it as userInput
+    }
+
+    // read in the contacts from the input file and add them to the vector of contacts
+    loadContacts(input, myContacts);
+
+    // write all the contacts to the output file
+    saveContacts(output, myContacts);
+
+    // search for certain contacts(based off user input)
+    searchContact(myContacts);
+
+    return 0;
+}
+```
+
+### Screenshots
+
+Here are some screenshots on functionality of this application:
+
+* This is me adding 2 random contacts:
+
+<img width="606" alt="Screen Shot 2022-04-15 at 8 05 08 PM" src="https://user-images.githubusercontent.com/59861277/163659137-b660d9ef-06d7-4d7d-839a-fff42a97dcdd.png">
+
+* Once we type in "-1" to search contacts, we can find those 2 contacts with their corresponding ID's:
+
+<img width="601" alt="Screen Shot 2022-04-15 at 8 06 53 PM" src="https://user-images.githubusercontent.com/59861277/163659186-ed226a42-8a00-41b6-bc17-6dfb4214fe8e.png">
+
+* If we attempt to find contact by ID that is out-of-bound we get the following message:
+
+<img width="573" alt="Screen Shot 2022-04-15 at 8 08 31 PM" src="https://user-images.githubusercontent.com/59861277/163659225-9cbe3409-8283-4911-b10a-32298d94981d.png">
+
+
+
+
+
 
