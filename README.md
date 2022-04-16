@@ -279,17 +279,25 @@ int main() {
 
 Here are some screenshots on functionality of this application:
 
+***
+
 * This is me adding 2 random contacts:
 
 <img width="606" alt="Screen Shot 2022-04-15 at 8 05 08 PM" src="https://user-images.githubusercontent.com/59861277/163659137-b660d9ef-06d7-4d7d-839a-fff42a97dcdd.png">
+
+***
 
 * Once we type in "-1" to search contacts, we can find those 2 contacts with their corresponding ID's:
 
 <img width="601" alt="Screen Shot 2022-04-15 at 8 06 53 PM" src="https://user-images.githubusercontent.com/59861277/163659186-ed226a42-8a00-41b6-bc17-6dfb4214fe8e.png">
 
+***
+
 * If we attempt to find contact by ID that is out-of-bound we get the following message:
 
 <img width="573" alt="Screen Shot 2022-04-15 at 8 08 31 PM" src="https://user-images.githubusercontent.com/59861277/163659225-9cbe3409-8283-4911-b10a-32298d94981d.png">
+
+***
 
 * If you noticed, the number of avaliable contacts is 45 but we only added 2.
 * Reasoning for this is once you are done adding your own contacts, it loads 43 contacts from a text file in order to test the loadContacts function, and see if the operator overloading is working.
@@ -297,13 +305,19 @@ Here are some screenshots on functionality of this application:
 * This is the first 2 contacts that are loaded after I added 2 contacts manually.
 <img width="237" alt="Screen Shot 2022-04-15 at 8 14 42 PM" src="https://user-images.githubusercontent.com/59861277/163659383-24e3c752-c996-45c3-a066-3623a0319497.png">
 
+***
+
 * Those 2 contacts get assinged a unique identifier in order they are loaded, so that we can search for them:
 
 <img width="581" alt="Screen Shot 2022-04-15 at 8 16 23 PM" src="https://user-images.githubusercontent.com/59861277/163659423-31a9a42e-02fb-4886-8081-76ff3c2ab9f6.png">
 
+***
+
 * Once all of the contact searching is done, we can exit the program by typing "-1", which results in the following message:
 
 <img width="577" alt="Screen Shot 2022-04-15 at 8 17 44 PM" src="https://user-images.githubusercontent.com/59861277/163659476-b2d6907b-04ee-474b-967f-137643158cb3.png">
+
+***
 
 * And we can confirm that the contacts we added + the contacts that were loaded, are succesfully saved to a file "output.txt":
 
@@ -315,3 +329,4 @@ Here are some screenshots on functionality of this application:
 
 I learned a lot about operator overloading and how to implement this concept into a real solution, and I find operator overloading very useful and necessary.
 
+***
