@@ -18,7 +18,9 @@ The purpose of this assignment is to assess the ability to:
 
 ## My approach
 ### Object-Oriented Solution
-For this project I made the Contact Class which had following private properties: 
+
+
+For this project I made the Contact Class which hasthe properties name, address, phone and id: 
 ```c++
 class Contact {
 private:
@@ -27,6 +29,21 @@ private:
     std::string phone;
     int id;
     // update identifier if object doesn't have one
-    void setID();
+    void setID(); // sets the ID when the contact is created
 ```
 
+So, the Contact has a name that is a Name class which has the followoing properties:
+```c++
+class Name {
+private:
+    std::string first_name;
+    std::string last_name;
+```
+
+Contact has an address that is Address class which has the following properties:
+```c++
+private:
+    std::string street;
+    std::string state;
+    std::string zip;
+```
