@@ -1,0 +1,60 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"jsonFile" : "directory-.-Debug-f5ebdc15457944623624.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.21"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "ContactManagmentSystem",
+					"targetIndexes" : 
+					[
+						0
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "ContactManagmentSystem::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ContactManagmentSystem-Debug-31ed628756e3b17d3cfe.json",
+					"name" : "ContactManagmentSystem",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/Users/dimabondar/Desktop/School/Year1S2/CST-210/CST-210_WorkSpace/ContactManagmentSystem/cmake-build-debug",
+		"source" : "/Users/dimabondar/Desktop/School/Year1S2/CST-210/CST-210_WorkSpace/ContactManagmentSystem"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 3
+	}
+}

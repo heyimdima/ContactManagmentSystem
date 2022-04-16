@@ -1,0 +1,3 @@
+/Users/dimabondar/Desktop/School/Year1S2/CST-210/CST-210_WorkSpace/ContactManagmentSystem/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/Users/dimabondar/Desktop/School/Year1S2/CST-210/CST-210_WorkSpace/ContactManagmentSystem/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/dimabondar/Desktop/School/Year1S2/CST-210/CST-210_WorkSpace/ContactManagmentSystem/cmake-build-debug/CMakeFiles/ContactManagmentSystem.dir

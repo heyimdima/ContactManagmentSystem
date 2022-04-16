@@ -1,0 +1,6 @@
+# ninja log v5
+0	483	1644623577372411841	CMakeFiles/ContactManagmentSystem.dir/main.cpp.o	5d2fd0df2a514fdc
+483	552	1644623577442788784	ContactManagmentSystem	f1820cbda9549a9f
+2	229	1644566049833068983	CMakeFiles/ContactManagmentSystem.dir/Contact.cpp.o	f23073b226e9623b
+0	395	1644623577284257387	CMakeFiles/ContactManagmentSystem.dir/Name.cpp.o	5d3c03f1a258a59
+1	291	1644530465969096381	CMakeFiles/ContactManagmentSystem.dir/Address.cpp.o	5daec82d1448bedc
