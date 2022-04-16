@@ -122,7 +122,7 @@ std::istream& operator>>(std::istream& in, Contact& rhs) {
 I needed a way to put it all together(in other words, I needed a driver), I could have made another class that would specifically be resposible to drive all of the component of this contact manager, but I decided to just use the main method and implement my functions there.
 (Side note: I did not do it because my proffessor said it was not required, but I made sure to keep my main method clean)
 
-Based the objective, which was mentioned at the beginning, I made 4 functions that provide the user ability to:
+Based on the objective, which was mentioned at the beginning, I made 4 functions that provide the user ability to:
 
 * Load Contacts (see comments for explanation)
 ```c++
