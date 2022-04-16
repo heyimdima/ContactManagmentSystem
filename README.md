@@ -17,8 +17,10 @@ The purpose of this assignment is to assess the ability to:
 * Utilize operator overloading in a C++ program.
 
 ## My approach
+
 ### Object-Oriented Solution
 
+***
 For this project I made the Contact Class which has the properties name, address, phone and id: 
 ```c++
 class Contact {
@@ -49,7 +51,6 @@ private:
 ```
 
 and that's how I broke down the Contact class, in order to overload the input and output operators in the future.
-
 ***
 
 ### Operator Overloading
