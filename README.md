@@ -119,12 +119,11 @@ std::istream& operator>>(std::istream& in, Contact& rhs) {
 
 ### Driver
 
-To put it all together, I needed a way to put it all together, I could have made another class that would specifically be resposible
-to drive all of the component of this contact manager, but I decided to just use the main method and implement my function there.
+To put it all together, I needed a way to put it all together(in other words, I needed a driver), I could have made another class that would specifically be resposible to drive all of the component of this contact manager, but I decided to just use the main method and implement my function there.
 
 Based the objective, which was mentioned at the beginning, I made 4 functions that provide the user ability to:
 
-* Load Contacts
+* Load Contacts (see comments for explanation)
 ```c++
 // function to read in contacts from the input file and add them to the vector of contacts
 // so that we can test the contact search and potentially load contacts user might have prior to creating new ones
@@ -143,7 +142,7 @@ void loadContacts(std::istream& in, std::vector<Contact>& list) {
     }
 }
 ```
-* Save Contacts
+* Save Contacts (see comments for explanation)
 ```c++
 // function to write all the contacts in the vector to the output file
 // essentially transfer all the contacts into the output.txt file
@@ -154,7 +153,7 @@ void saveContacts(std::ostream& out, const std::vector<Contact>& list) {
     }
 }
 ```
-* Add Contact
+* Add Contact (see comments for explanation)
 ```c++
 // function to add individual contact (prompts the user to enter information) and adds the contact to vector
 void addContact(std::vector<Contact>& list) {
@@ -191,7 +190,7 @@ void addContact(std::vector<Contact>& list) {
         "ID:|" << c.getID() << "| has been successfully added ---" << std::endl;
     std::cout << "-------------------------------------------------------------------------" << std::endl;
 ```
-* Search Contact
+* Search Contact (see comments for explanation)
 ```c++
 // search for certain contact (based off user input) in the vector of contacts
 // and print it to the console
