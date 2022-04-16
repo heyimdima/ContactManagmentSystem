@@ -20,7 +20,7 @@ The purpose of this assignment is to assess the ability to:
 ### Object-Oriented Solution
 
 
-For this project I made the Contact Class which hasthe properties name, address, phone and id: 
+For this project I made the Contact Class which has the properties name, address, phone and id: 
 ```c++
 class Contact {
 private:
